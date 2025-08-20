@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>UBeauty, contact</title>
+  </head>
+
+  <!-- NAVIGATION BAR -->
+
+  <body class="contact-page">
+    <nav class="navbar">
+      <button
+        class="menu-hamburger"
+        onclick="toggleMenu()"
+        aria-label="Toggle navigation"
+      >
+        &#9776;
+      </button>
+
+      <div class="logo">
+        <img src="images/UBlogo.png" alt="UBeauty Logo" />
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">home</a>
+        <a href="laser.html">laser</a>
+        <a href="injections.html">injections</a>
+        <a href="eyelashes.html">eyelashes</a>
+        <a href="nails.html">nails</a>
+        <a href="faceHair.html">face/hair</a>
+        <a href="cleaning.html">cleaning</a>
+        <a href="contact.html">contact</a>
+      </div>
+    </nav>
+
+    <!--CONTACT PAGE MAIN SCREEN IMAGE-->
+
+    <section class="contact-main">
+      <div class="contact-main-image">
+        <img src="images/BackgroundContactMain.jpg" alt="Background leaf" />
+        <h2>CONTACT US</h2>
+      </div>
+    </section>
+
+    <section class="contact-main-mobile">
+      <div class="contact-main-image-mobile">
+        <img
+          src="images/BackgroundContactaMobile.jpg"
+          alt="Background leaf contact"
+        />
+        <h2>CONTACT US</h2>
+      </div>
+    </section>
+
+    <!--CONTACT MAIN TEXT-->
+
+    <section class="contact-whyus-section">
+      <div class="contact-text">
+        <div class="contact">
+          <h2>why us</h2>
+          <p class="spaced-paragraph">
+            We know how much heart, skill, and tradition go into Ukrainian
+            beauty services — and we want to share that with the whole UK! If
+            you are a Ukrainian beauty salon, self-employed specialist, or small
+            business based in the UK, this is your chance to be part of
+            something bigger.
+          </p>
+          <p class="spaced-paragraph">
+            Whether you create perfect nails, transform hair, work magic with
+            eyelashes, offer rejuvenating laser or facial treatments, provide
+            expert injections, or even run cleaning and wellness services — your
+            talent deserves to be seen.
+          </p>
+          <p class="spaced-paragraph">
+            By joining our U Beauty community, you will: Showcase your work with
+            a personalised profile — photos, price lists, and links to your
+            social media. Reach new clients who are looking for trusted
+            Ukrainian specialists in the UK. Stand together with other Ukrainian
+            professionals, building a network that supports and promotes each
+            other.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--CONTACT FORM-->
+
+    <section class="contact-section">
+      <h2>Join U-Beauty</h2>
+      <form
+        class="contact-form"
+        action="submit"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label for="name">Full name / business name *</label>
+        <input type="text" id="name" name="name" required />
+
+        <div class="form-group">
+          <p>What type of beauty service do you or your company provide? *</p>
+          <div class="checkbox-grid">
+            <label
+              ><input type="checkbox" name="service[]" value="Laser" />
+              Laser</label
+            >
+            <label
+              ><input type="checkbox" name="service[]" value="Nails" />
+              Nails</label
+            >
+            <label
+              ><input type="checkbox" name="service[]" value="Eyelashes" />
+              Eyelashes</label
+            >
+            <label
+              ><input type="checkbox" name="service[]" value="Eyebrows" />
+              Eyebrows</label
+            >
+            <label
+              ><input type="checkbox" name="service[]" value="Hairdresser" />
+              Hairdresser</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="service[]"
+                value="Face Massage"
+              />Face Massage</label
+            >
+            <label
+              ><input type="checkbox" name="service[]" value="Injections" />
+              Injections</label
+            >
+            <label
+              ><input type="checkbox" name="service[]" value="Tattoo" />
+              Tattoo</label
+            >
+            <label
+              ><input type="checkbox" name="service[]" value="Cleaning" />
+              Cleaning</label
+            >
+            <label
+              ><input type="checkbox" name="service[]" value="Other" />
+              Other</label
+            >
+          </div>
+        </div>
+
+        <label for="somedia"
+          >Links to your website/social media profiles:</label
+        >
+        <textarea
+          id="somedia"
+          name="somedia"
+          placeholder="Facebook, Instagram, Tik-Tok..."
+        ></textarea>
+
+        <div class="short-questions">
+          <div class="question-item">
+            <label
+              >Are you interested in promotion of your service (fee-based) in
+              the future? *</label
+            >
+            <select name="promotion" required>
+              <option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div class="question-item">
+            <label>Do you have all legal papers to operate in the UK? *</label>
+            <select name="legal" required>
+              <option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div class="question-item">
+            <label>Do you hold relevant certificates? *</label>
+            <select name="certificates" required>
+              <option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div class="question-item">
+            <label for="english">English language level *</label>
+            <select id="english" name="english" required>
+              <option value="" disabled selected>Select</option>
+              <option value="basic">Basic</option>
+              <option value="medium">Medium</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="file-upload-row">
+          <div class="file-upload-item">
+            <label for="profilephoto">Add your profile image: *</label>
+            <input
+              type="file"
+              id="profilephoto"
+              name="profilephoto"
+              accept="image/*"
+              required
+            />
+          </div>
+
+          <div class="file-upload-item">
+            <label for="pricelist">Add your price list:</label>
+            <input
+              type="file"
+              id="pricelist"
+              name="pricelist"
+              accept=".jpg,.png,.pdf"
+            />
+          </div>
+        </div>
+
+        <label for="email">Your Email address: * </label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Your Phone number: *</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="serviceDetails"
+          >Provide additional information (50 words max):</label
+        >
+        <textarea
+          id="serviceDetails"
+          name="serviceDetails"
+          maxlength="300"
+          rows="3"
+          placeholder="Tell us more about your services..."
+        ></textarea>
+
+        <button type="submit">Submit Request</button>
+      </form>
+    </section>
+
+    <!--FOOTER-->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img
+            src="images/UBlogo.png"
+            alt="U Beauty Logo"
+            class="U Beauty logo"
+          />
+        </div>
+
+        <div class="footer-center">
+          <p class="follow-text">Follow us:</p>
+          <div class="social-icons">
+            <a href="#" aria-label>
+              <img src="images/Facebook.png" alt="Facebook" />
+            </a>
+            <a href="#" aria-label>
+              <img src="images/Instagram.png" alt="Instagram" />
+            </a>
+            <a href="#" aria-label>
+              <img src="images/WhatsApp.png" alt="WhatsApp" />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="laser.html">Laser</a></li>
+            <li><a href="nails.html">Nails</a></li>
+            <li><a href="eyelashes.html">Eyelashes</a></li>
+            <li><a href="injections.html">Injections</a></li>
+            <li><a href="faceHair.html">Face/Hair</a></li>
+            <li><a href="cleaning.html">Cleaning</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="footer-search">
+            <input
+              type="text"
+              placeholder="Search services..."
+              id="footerSearch"
+            />
+            <button type="button" onclick="footerSearch()">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 U Beauty UK. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+      }
+    </script>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

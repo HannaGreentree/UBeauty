@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <title>UBeauty, cleaning</title>
+  </head>
+
+  <!-- NAVIGATION BAR -->
+
+  <body>
+    <nav class="navbar">
+      <button
+        class="menu-hamburger"
+        onclick="toggleMenu()"
+        aria-label="Toggle navigation"
+      >
+        &#9776;
+      </button>
+
+      <div class="logo">
+        <img src="images/UBlogo.png" alt="UBeauty Logo" />
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">home</a>
+        <a href="laser.html">laser</a>
+        <a href="injections.html">injections</a>
+        <a href="eyelashes.html">eyelashes</a>
+        <a href="nails.html">nails</a>
+        <a href="faceHair.html">face/hair</a>
+        <a href="cleaning.html">cleaning</a>
+        <a href="contact.html">contact</a>
+      </div>
+    </nav>
+
+    <!--MAIN SCREEN-->
+
+    <section class="cleaning-main">
+      <div class="cleaning-main-image">
+        <img src="images/CleaningMainDesktop.jpg" alt="Cleaning kitchen" />
+        <h2 class="cleaning-text-on">CLEANING SERVICE</h2>
+      </div>
+    </section>
+
+    <section class="cleaning-main-mobile">
+      <div class="cleaning-main-image-mobile">
+        <img src="images/CleaningMainMobile.jpeg" alt="Cleaning kitchen full" />
+        <h2 class="cleaning-text-on-mob">CLEANING SERVICE</h2>
+      </div>
+    </section>
+
+    <!--MAIN TEXT-->
+
+    <section class="cleaning-whyus-section">
+      <div class="cleaning-text">
+        <h2>why us</h2>
+        <p class="spaced-paragraph">
+          We clean houses since we were kids, giving us opportunity to improve
+          ourselves within the time. We are punctual and reliable, not afraid of
+          physical work and focused on getting it done properly, not quickly.
+        </p>
+
+        <img
+          src="images/pseparator.png"
+          alt="Paragraph separator flowers"
+          class="pseparator"
+        />
+
+        <p class="spaced-paragraph">
+          We can notice the “little things” — like polishing fixtures, arranging
+          bedding perfectly, or removing water spots from glass. A clean home is
+          not just “clean” — it’s welcoming and emotionally upliftings.
+        </p>
+      </div>
+    </section>
+
+    <!--CLEANING LOCATION CIRCLES TITLE-->
+
+    <section class="cleaning-loc">
+      <div class="cleaning-location-title">
+        <h2>locations</h2>
+      </div>
+    </section>
+
+    <!--CLEANING LOCATION CIRCLES-->
+
+    <div class="cleaning-location">
+      <div class="cleaning-circle-row">
+        <div class="cleaning-circle">Whiteley</div>
+        <div class="cleaning-circle">Fareham</div>
+        <div class="cleaning-circle">Gosport</div>
+      </div>
+    </div>
+
+    <!--CLEANING PAGE SPECIALIST NAME-->
+    <!--CLEAINING PAGE SPECIALIST NAME LEFT SIDE DESIGN-->
+
+    <section class="cleaning-specialist">
+      <div class="cleaning-specialist-image">
+        <img src="images/HairStylist.JPG" alt="Olena Shevchenko at work" />
+      </div>
+      <div class="cleaning-name-box">
+        <div class="cleaning-name-Shevchenko">
+          <h3>Olena Shevchenko</h3>
+          <h4>Cleaning specialist</h4>
+        </div>
+        <div class="cleaning-specialist-info">
+          <div class="cleaning-column-left">
+            <p>LOCATION</p>
+            <p>Whiteley area</p>
+            <p>Fareham area</p>
+            <p>Gosport area</p>
+            <p>Ukrainian - fluent</p>
+            <p>English - basic</p>
+            <p>Olena on social media:</p>
+            <div class="cleaning-social-icons">
+              <a
+                href="images/Facebook.png"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <img src="images/Facebook.png" alt="Facebook" />
+              </a>
+              <a
+                href="images/Instagram.png"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <img src="images/Instagram.png" alt="Instagram" />
+              </a>
+            </div>
+          </div>
+          <div class="cleaning-column-right">
+            <p>PRICE</p>
+            <p>Cleaning 3b house - £80</p>
+            <p>Cleaning 1b flat - £45</p>
+            <p>Moving Out Cleaning - from £150</p>
+            <p>Contact Olena for details:</p>
+            <div class="cleaning-phone-Shevchenko">
+              <a href="tel:+441234567890" class="phone-link">
+                <img
+                  src="images/PhoneIcon.png"
+                  alt="Phone"
+                  class="phone-icon"
+                />
+                Book your visit
+              </a>
+              <a href="tel:+441234567890" class="message-link">
+                <img
+                  src="images/WhatsApp.png"
+                  alt="Phone"
+                  class="whatsapp-icon"
+                />
+                Send a message
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--CLEANING PAGE SPECIALIST NAME PORTFOLIO-->
+
+    <div class="prtf-title">
+      <h2>portfolio</h2>
+      <div class="specialist-portfolio">
+        <i class="slider-btn left fa-solid fa-angle-left"></i>
+        <ul class="specialist-slideshow">
+          <li class="slide-image">
+            <img src="images/Cleaning1.JPG" alt="Olena at work" />
+          </li>
+          <li class="slide-image">
+            <img src="images/Cleaning15.JPG" alt="Olena cleaning" />
+          </li>
+          <li class="slide-image">
+            <img src="images/Cleaning2.JPG" alt="Olena tools" />
+          </li>
+          <li class="slide-image">
+            <img src="images/Cleaning3.JPG" alt="Olena smile" />
+          </li>
+        </ul>
+        <i class="slider-btn right fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+
+    <!--CLEANING PAGE SPECIALIST NAME RIGHT SIDE DESIGN-->
+
+    <section class="cleaning-specialist reverse-design">
+      <div class="cleaning-specialist-image">
+        <img
+          src="images/YuliaDyachenkoTeam.jpg"
+          alt="Olena Kolomyetc at work"
+        />
+      </div>
+      <div class="cleaning-name-box">
+        <div class="cleaning-name-Shevchenko">
+          <h3>Olena Kolomyetc</h3>
+          <h4>Cleaing specialist</h4>
+        </div>
+        <div class="cleaning-specialist-info">
+          <div class="cleaning-column-left">
+            <p>LOCATION</p>
+            <p>Gosposrt area</p>
+            <p>Fareham area</p>
+
+            <p>Ukrainian - fluent</p>
+            <p>English - medium</p>
+            <p>Olena on social media:</p>
+            <div class="cleaning-social-icons">
+              <a
+                href="images/Facebook.png"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <img src="images/Facebook.png" alt="Facebook" />
+              </a>
+              <a
+                href="images/Instagram.png"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <img src="images/Instagram.png" alt="Instagram" />
+              </a>
+            </div>
+          </div>
+          <div class="cleaning-column-right">
+            <p>PRICE</p>
+            <p>Cleaning 3b house - £80</p>
+            <p>Cleaning 1b flat - £45</p>
+            <p>Moving Out Cleaning - from £150</p>
+            <p>Contact Olena for details:</p>
+            <div class="cleaning-phone-Shevchenko">
+              <a href="tel:+441234567890" class="phone-link">
+                <img
+                  src="images/PhoneIcon.png"
+                  alt="Phone"
+                  class="phone-icon"
+                />
+                Book your visit
+              </a>
+              <a href="tel:+441234567890" class="message-link">
+                <img
+                  src="images/WhatsApp.png"
+                  alt="Phone"
+                  class="whatsapp-icon"
+                />
+                Send a message
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--CLEANING PAGE SPECIALIST NAME PORTFOLIO-->
+
+    <div class="prtf-title">
+      <h2>portfolio</h2>
+      <div class="specialist-portfolio">
+        <i class="slider-btn left fa-solid fa-angle-left"></i>
+        <ul class="specialist-slideshow">
+          <li class="slide-image">
+            <img src="images/Cleaning13.JPG" alt="Olena smile" />
+          </li>
+          <li class="slide-image">
+            <img src="images/Cleaning5.JPG" alt="Olena at work" />
+          </li>
+          <li class="slide-image">
+            <img src="images/Cleaning6.JPG" alt="Olena cleaning" />
+          </li>
+          <li class="slide-image">
+            <img src="images/Cleaning2.JPG" alt="Olena tools" />
+          </li>
+        </ul>
+        <i class="slider-btn right fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+
+    <!--CLEANING PAGE SPECIALIST NAME LEFT SIDE DESIGN-->
+
+    <section class="cleaning-specialist">
+      <div class="cleaning-specialist-image">
+        <img
+          src="images/CleaninagSpecialist2.JPG"
+          alt="Olena Shevchenko at work"
+        />
+      </div>
+      <div class="cleaning-name-box">
+        <div class="cleaning-name-Shevchenko">
+          <h3>Olena Shevchenko</h3>
+          <h4>Cleaning specialist</h4>
+        </div>
+        <div class="cleaning-specialist-info">
+          <div class="cleaning-column-left">
+            <p>LOCATION</p>
+            <p>Whiteley area</p>
+            <p>Fareham area</p>
+            <p>Gosport area</p>
+            <p>Ukrainian - fluent</p>
+            <p>English - basic</p>
+            <p>Olena on social media:</p>
+            <div class="cleaning-social-icons">
+              <a
+                href="images/Facebook.png"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <img src="images/Facebook.png" alt="Facebook" />
+              </a>
+              <a
+                href="images/Instagram.png"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <img src="images/Instagram.png" alt="Instagram" />
+              </a>
+            </div>
+          </div>
+          <div class="cleaning-column-right">
+            <p>PRICE</p>
+            <p>Cleaning 3b house - £80</p>
+            <p>Cleaning 1b flat - £45</p>
+            <p>Moving Out Cleaning - from £150</p>
+            <p>Contact Olena for details:</p>
+            <div class="cleaning-phone-Shevchenko">
+              <a href="tel:+441234567890" class="phone-link">
+                <img
+                  src="images/PhoneIcon.png"
+                  alt="Phone"
+                  class="phone-icon"
+                />
+                Book your visit
+              </a>
+              <a href="tel:+441234567890" class="message-link">
+                <img
+                  src="images/WhatsApp.png"
+                  alt="Phone"
+                  class="whatsapp-icon"
+                />
+                Send a message
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--CLEANING PAGE SPECIALIST NAME PORTFOLIO-->
+
+    <div class="prtf-title">
+      <h2>portfolio</h2>
+      <div class="specialist-portfolio">
+        <i class="slider-btn left fa-solid fa-angle-left"></i>
+        <ul class="specialist-slideshow">
+          <li class="slide-image">
+            <img src="images/Cleaning9.JPG" alt="Olena at work" />
+          </li>
+          <li class="slide-image">
+            <img src="images/Cleaning10.JPG" alt="Olena cleaning" />
+          </li>
+          <li class="slide-image">
+            <img src="images/Cleaning11.JPG" alt="Olena tools" />
+          </li>
+          <li class="slide-image">
+            <img src="images/Cleaning7.JPG" alt="Olena tools" />
+          </li>
+          <li class="slide-image">
+            <img src="images/Cleaning8.JPG" alt="Olena smile" />
+          </li>
+        </ul>
+        <i class="slider-btn right fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img
+            src="images/UBlogo.png"
+            alt="U Beauty Logo"
+            class="U Beauty logo"
+          />
+        </div>
+
+        <div class="footer-center">
+          <p class="follow-text">Follow us:</p>
+          <div class="social-icons">
+            <a href="#" aria-label
+              ><img src="images/Facebook.png" alt="Facebook"
+            /></a>
+            <a href="#" aria-label
+              ><img src="images/Instagram.png" alt="Instagram"
+            /></a>
+            <a href="#" aria-label
+              ><img src="images/WhatsApp.png" alt="WhatsApp"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="laser.html">Laser</a></li>
+            <li><a href="nails.html">Nails</a></li>
+            <li><a href="eyelashes.html">Eyelashes</a></li>
+            <li><a href="injections.html">Injections</a></li>
+            <li><a href="faceHair.html">Face/Hair</a></li>
+            <li><a href="cleaning.html">Cleaning</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="footer-search">
+            <input
+              type="text"
+              placeholder="Search services..."
+              id="footerSearch"
+            />
+            <button type="button" onclick="footerSearch()">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 U Beauty UK. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
