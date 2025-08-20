@@ -1,0 +1,4571 @@
+/*HOME PAGE*/
+
+html, body {
+    overflow-x: hidden;
+}
+
+.body {
+  font-family: "Nunito Sans", sans-serif; 
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;  
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 120px;
+  flex-wrap: wrap;
+  background-color: #fff; 
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.logo img {
+  height: 90px;
+}
+
+.menu-hamburger {
+  font-size: 28px;
+  display: none;
+  cursor: pointer;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.nav-links {
+  justify-content: flex-end; 
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  row-gap: 10px;
+  line-height: 0.3;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;  
+}
+
+.nav-links a {
+  flex: 1 0 22%;
+  text-align: center;
+  text-decoration: none;
+  color: #2d1e1e;
+  padding: 10px 5px;
+  font-size: 16px;
+  transition: 0.3s ease;  
+}
+
+.nav-links a:hover {
+  color: #e5dc36;
+  font-weight: bold;   
+  width: 100%;  
+}
+
+/*NAVIGATION FOR MOBILE PHONES*/
+
+@media (max-width: 768px) {
+  .navbar {
+     justify-content: center;
+     position: relative;  
+  }
+
+  .menu-hamburger {
+     display: block;
+     font-family: "Nunito Sans", sans-serif;
+     position: absolute;
+     font-size: 58px;
+     font-weight: 200; 
+     left: 20px;
+     top: 20px;
+     cursor: pointer;    
+     border: none;
+     background: rgb(255, 255, 255);
+     box-shadow: none;
+     margin: -10px;
+}
+
+  .logo img {
+     height: 80px;
+}
+
+  .nav-links {
+     display: none;
+     text-align: center;
+     position: absolute;
+     flex-direction: column;
+     width: 180px;
+     background-color: #fff;
+     border: 1px solid #ffffff;
+     top: 100%;
+     right: 10px;
+     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+     z-index: 1;
+     gap: 20px;
+  }
+
+  .nav-links.active {
+     display: flex;
+  }
+
+  .nav-links a {
+     font-size: 16px;
+     padding: 12px;  
+  }
+}
+
+/* DESKTOP COLLAGE*/
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vh;
+  padding: 0px;
+  gap: 0px;
+}
+
+.img-box {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; 
+}
+
+.img-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: saturate(70%);  
+}
+
+.img1 {
+  grid-row: 1 / 4;
+  grid-column: 1 / 2;  
+}
+
+.img4 {
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 4px;
+  box-shadow: #ffffff 0px 0px 20px;
+}
+
+.img3 {
+  border-color: #ffffff;
+  box-shadow: #ffffff 0px 0px 20px;
+  border-width: 4px;
+  border-style: solid;
+}
+
+.img7 {
+  border-color: #ffffff;
+  box-shadow: #ffffff 0px 0px 20px;
+  border-width: 4px;
+  border-style: solid;  
+}
+
+
+/*ANIMATION ON IMAGES 3,4,7*/
+
+.moving-from-right .img-box-img {
+  transform: translateX(100px);
+}
+
+.moving-from-left .img-box-img {
+  transform: translateX(-100px);
+}
+
+.moving-from-top .img-box-img {
+  transform: translateY(-100px); 
+}
+
+.moving-from-top .img-box-img,
+.moving-from-left .img-box-img,
+.moving-from-right .img-box-img {
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.moving-from-top.in-view .img-box-img,
+.moving-from-left.in-view .img-box-img,
+.moving-from-right.in-view .img-box-img {
+  opacity: 1;
+  transform: translate(0);
+}
+
+
+/* IMAGES COLLAGE MOBILE VERSION */
+
+
+@media (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    gap: 0;
+  }
+
+  .img1 {
+    grid-column: 1 / 3;
+    height: 270px;
+  }
+
+  .img2, .img3, .img4, .img5, .img6, .img7 {
+    grid-column: auto;
+    height: 150px;
+  }
+
+  .img-box {
+    overflow: hidden;
+    width: 100%;  
+  }
+
+  .img-box img {
+    display: flex;
+    object-fit: cover; 
+    width: 100%;
+    height: 100%;   
+  }
+}
+
+ /*MAIN SLOGAN*/
+
+.text-block {
+  text-align: center;
+  font-family: "Dancing Script", cursive; 
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 1.5rem;
+  color: #3d3630d3;
+  letter-spacing: 2px;
+  font-weight: 200; 
+}
+
+@media (max-width: 768px) {
+  .text-block {
+    font-size: 1.2rem;
+    z-index: 10;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: transparent;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+}
+
+/*CIRCLE ROW*/
+
+.circle-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px; 
+  gap: 30px;  
+  margin-bottom: -30px;
+  margin-top: -30px;
+}
+
+.circle {
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  flex: 1 1 150px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+  width: 170px;
+  height: 170px;
+  max-width: 160px;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  font-weight: 500;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
+}
+
+.circle:hover {
+  transform: scale(1.1);
+}
+
+.circle {
+  transition: transform 0.3s ease-in-out;
+}
+ 
+.circle span  { 
+  transform: none;
+  transition: transform 0.3s ease; 
+  z-index: 1;  
+}
+
+/*CIRCLE ROW MOBILE VERSION*/
+
+@media (max-width: 768px) {
+ .circle {
+    width: 150px;
+    height: 150px;
+    font-size: 15px; 
+  }
+
+.circle-row {
+   margin-bottom: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   padding: 30px; 
+   gap: 20px;
+   position: relative;
+   z-index: 1;       
+}
+
+.circle.active {
+  transform: scale(1.1);
+}
+}
+
+/*SERVICE LIST*/
+
+.services-list {
+  grid-template-columns: 1fr 1fr; 
+  display: grid;
+  list-style-type: disc; 
+  margin: auto;
+  text-align: left;
+  column-gap: 0px;
+  gap: 0 0;
+  max-width: 700px; 
+  padding: 10px 10px;
+  padding-left: 8%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);  
+}
+
+.services-list li {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 200;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  line-height: 1.6;  
+  list-style-position: outside; 
+  list-style-type: disc; 
+}
+
+.services-list li::marker {
+  color: #c4dbd4;
+  font-size: 1.8rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  list-style-type: disc;  
+}
+
+/*SERVICE LIST MOBILE VERSION*/
+
+@media (max-width: 600px) {
+  .services-list {
+    font-size: 0.6rem;
+    line-height: 1.2;  
+  }
+   
+  .container {
+    position: relative;
+    z-index: 2;
+  } 
+
+   .services { 
+      position: relative;
+      z-index: 2;
+  }
+
+  .services-list li {
+    margin-bottom: 5px; 
+    font-size: 13px;
+    list-style-position: inside;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+  }
+}
+
+/*BLOCK WITH IMAGE AND LOCATIONS*/
+
+.wrapper {
+    flex-direction: column;
+  }
+
+.container {
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: flex-start;
+   position: relative;
+   padding-left: 50px;
+   padding-top: 30px;  
+}
+
+.location-left {
+   flex: 0 0 60%;
+   max-width: 60%;
+   max-height: 60%;
+   overflow: hidden;  
+}
+
+.location-left img {
+   width: 100%; 
+   height: 100%;  
+   object-fit: cover;
+   vertical-align: middle;
+}
+
+.location-box {
+  font-family: "Nunito Sans", sans-serif;
+   flex: 0 0 60%;
+   align-self: center;
+   margin-left: -40px; 
+   background-image: url('../images/BackgroundHomeText.png');
+   background-size: cover;
+   z-index: 2;
+   position: relative;
+   padding: 20px;
+   height: auto;
+   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.location-box h2 {
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 1.7rem; 
+   color: #0a8a44;
+   font-weight: 200;
+   width: 100%;
+   letter-spacing: 4px;
+   text-align: left;    
+}
+
+.location-list {
+   text-align: left;
+   width: 100%;
+   max-width: 300px;
+   margin: auto;
+   padding: 0;    
+}
+
+.location-list li {
+   font-family: "Nunito Sans", sans-serif;
+   font-size: 1.2rem;
+   margin-bottom: 10px;
+   font-weight: 400;
+   letter-spacing: 8px;   
+}
+
+.location-list li:hover {
+  transform: scale(1.1);
+}
+
+.location-list li {
+  transition: transform 0.3s ease-in-out;
+}
+ 
+.location-list li span  { 
+  transform: none;
+  transition: transform 0.3s ease; 
+  z-index: 1;
+}
+
+.location-list li.active {
+    transform: scale(1.1);
+  }
+ 
+a {
+  color: #171409; 
+  text-decoration: none; 
+}
+
+.arrow::marker {
+    content: "⇾"; 
+}
+
+a:hover {
+  color: #dcd63c; 
+  text-decoration: none;
+}
+
+/*BLOCK WITH LOCATIONS MOBILE VERSION*/
+
+@media (max-width: 768px) {
+.location-left img {
+   width: 100%; 
+   height: 300px;  
+   position: relative; 
+   padding-top: 20px;
+   box-sizing: border-box;
+   padding-left: 0;  
+   filter: opacity(0.7);  
+}
+
+.location-list {
+  z-index: 2;
+  position: relative;
+
+}
+
+.location-list li {
+   
+   font-size: 1.1rem;
+   margin-right: 10px;
+   font-weight: 400;    
+}
+
+.location-list li.active {
+    transform: scale(1.2);
+  }
+}
+
+/*ABOUT SECTION*/
+
+.about-section {
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  color: #151a17;
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  padding: 50px;
+  padding-top: 0;
+  background-image: url('../images/BackgroundHome.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.about-section h2 {
+  font-size: 1.7rem;
+  color: #0a8a44;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.about-text { 
+  background-color: #ffffff;                                 
+  margin: 40px auto;
+  width: 85%;  
+  padding: 30px 20px;            
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);   
+}
+
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.transfer-contact {
+  color: #fbed2b; /* U Beauty pink */
+  text-decoration: none;
+  border-style: double;
+  border-bottom: 2px solid;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  border-radius: 120%;
+  padding: 5px;
+}
+
+.transfer-contact:hover {
+  color: #88c8ff;; /* slightly darker pink */
+  border-bottom: 2px solid #fbed2b;
+  padding: 5px;  
+}
+
+/*ABOUT MOBILE VERSION*/
+
+@media (max-width: 768px) {
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.about-text p {
+  text-align: justify;
+  line-height: 1.5;  
+}
+
+.about-text {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+.about-section {
+  z-index: 2;
+  position: relative;
+}
+}
+
+/*TEAM CONTAINER*/
+
+.our-team h2 {
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  color: #0a8a44;
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 10px;
+  margin-top: 40px;   
+}
+
+/*TEAM SECTION IMAGES*/
+
+.team-section {
+  display: grid;
+  margin: 0 auto;  
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1100px; 
+  gap: 20px;
+  padding: 20px;         
+}
+
+.team-member {
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  color: #209a57;
+  padding: 10px;    
+}
+
+.member-name {
+  margin-bottom: 10px;
+}
+
+.team-member img {
+  width: 85%;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  filter: saturate(20%);
+}
+
+.member-name h3 {
+  font-family: "Dancing Script"; 
+  font-size: 1.4rem;
+  color: #1a1517;
+  font-weight: 300;
+}
+
+.member-name p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.0rem;
+}
+
+.member-name p:nth-of-type(2) {
+  font-size: 0.8rem;
+  color: #1a1517;
+  font-weight: 300;
+}
+
+/*TEAM SECTION MOBILE VERSION*/
+
+
+@media (max-width: 768px) {
+  .team-section {
+    grid-template-columns: repeat(2, 1fr);
+    z-index: 2;
+    position: relative;
+  }
+
+  .team-member img {
+    height: auto;
+  }
+}
+
+/*WHY US SECTION*/
+
+.why-section {
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  color: #151a17;
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  padding: 50px;
+  padding-top: 0px;
+  background-image: url('../images/BackgroundHome.png'); 
+  background-size: cover;
+  background-position: center; 
+}
+
+.why-section h2 {
+  font-size: 1.7rem;
+  color: #0a8a44;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  font-weight: 400;  
+}
+
+.why { 
+  background-color: #ffffff;                                 
+  margin: 40px auto;
+  width: 85%;   
+  padding: 30px 20px;            
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); 
+}
+
+/*WHY US MOBILE VERSION*/
+
+@media (max-width: 768px) {
+ .spaced-paragraph {
+   margin: 25px;
+}
+
+.why-section p {
+  text-align: justify;
+  line-height: 1.5;
+  padding-bottom: 20px;
+}
+
+.why {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+}
+
+/*FOOTER*/
+
+.footer {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;  
+}
+
+.footer-center, .footer-left, .footer-right {
+  flex: 1 1 200px;
+}
+
+.footer-logo img {
+  width: 220px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.follow-text {
+  font-family: "Nunito Sans", sans-serif;
+  color: #2c1e1e;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;  
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;  
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  font-family: "Nunito Sans", sans-serif;
+  list-style: none;
+  margin: 10px;
+  gap: 10px 20px;
+  column-gap: 60px;  
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #333;  
+}
+
+.footer-links li a:hover {
+  color: #879089;
+  text-decoration: none; 
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #2c1e1e;
+  margin-top: 30px;
+}
+
+/*FOOTER MOBILE VERSION*/
+
+@media (max-width: 768px) {
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto;
+    margin-left: 70px;
+  }
+
+  .footer-nav {
+    margin-top: 0;
+}
+}
+
+/*FOOTER SEARH BAR*/
+
+.footer-search {
+  justify-content: flex-end;
+  margin: 70px;
+  display: flex;
+  gap: 8px;  
+}
+
+.footer-search button {
+  color: white;
+  background-color: #291b20;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer; 
+}
+
+.footer-search input {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.footer-search button:hover {
+  background-color: #626262;
+}
+
+@media (max-width: 768px) {
+   .footer-search button {
+    width: 100%;
+  }
+  .footer-search {
+    flex-direction: column;
+  } 
+}
+
+/*LASER PAGE*/
+/*LASER PAGE MAIN SCREEN*/
+
+.laser-main-mobile {
+   display: none;
+}
+
+.laser-main {
+  width: 100%;     
+}
+
+.laser-main-image h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2.0rem;
+  color: black;
+  background-color: white;
+  font-weight: 200;
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  bottom: 290px;
+  padding: 10px 20px;
+  transform: translateX(-50%);
+}
+
+.laser-main-image {
+  max-width: 1400px;
+  text-align: center;
+  position: relative;
+}
+ 
+.laser-main-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.laser-text-on {
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  animation: slideInCenter 1.5s ease-out forwards;
+  animation-delay: 500ms;
+}
+
+/*LASER PAGE MAIN SCREEN MOBILE*/
+
+@media (max-width: 768px) {
+  .laser-main-mobile {
+    display: block;
+    width: 100%;
+}
+
+.laser-text-on-mob {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: black;
+  position: absolute;
+  width: 70%;
+  position: absolute;
+  padding: 10px 20px;  
+  left: 35%;
+  bottom: 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  transform: translateX(-50%);        
+}
+
+.laser-main {
+  display: none;
+}
+
+.laser-main-image-mobile {
+  text-align: center;
+  position: relative;  
+}
+
+.laser-main-image-mobile-img {
+  width: 100%;
+  height: 350px;
+  display: block;
+  object-fit: cover;  
+}
+}
+
+/*LASER TEXT WHY US*/
+
+.laser-whyus-section {
+  font-family: "Nunito Sans", sans-serif;
+  color: #151a17;
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 50px;
+  padding-top: 0;
+  background-image: url('../images/BackgroundHome.png'); 
+}
+
+.laser-text h2 {
+  font-size: 1.7rem;
+  color: #0a8a44;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.laser-text { 
+  background-color: #ffffff;                                 
+  margin: 40px auto;
+  width: 85%;  
+  padding: 30px 20px;            
+}
+
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.pseparator {
+  display: block;
+  height: auto;
+  width: 100px;
+  margin: 20px auto;
+}
+
+/*LASER PAGE WHYUS MOBILE VERSION*/
+
+@media (max-width: 768px) {
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.laser-whyus-section {
+  z-index: 2;
+  position: relative;
+}
+
+.laser-text p {
+  line-height: 1.5; 
+  text-align: justify;   
+}
+
+.laser-text {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+}
+
+/*LASER PAGE CIRCLES SECTION*/
+
+/*LASER PAGE CIRCLES TITLE*/
+
+.laser-circle-row {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 20px; 
+  margin-bottom: 40px; 
+}
+
+.laser-location h2 {
+  font-family: "Nunito Sans", sans-serif;
+  color: #0a8a44;
+  font-size: 1.7rem;
+  font-weight: 200;
+  margin-bottom: 40px;
+  margin-top: 40px; 
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+.laser-circle {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  width: 170px;
+  height: 170px;
+  max-width: 160px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 1 1 150px;
+  background-image: url('../images/BackgroundHomeText.png');
+}
+
+.laser-location-title h2 { 
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #0a8a44; 
+  letter-spacing: 8px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 0; 
+  font-weight: 400;
+  margin-bottom: 30px;
+  }
+
+.laser-circle:hover {
+  transform: scale(1.1);
+}
+
+.laser-circle {
+  transition: transform 0.3s ease-in-out;
+}
+ 
+.laser-circle span  { 
+  transform: none;
+  transition: transform 0.3s ease; 
+  z-index: 1;
+}
+
+  .laser-circle.active {
+    transform: scale(1.1);
+}
+
+
+/*CIRCLES ROW MOBILE VERSION*/
+
+@media (max-width: 768px) {
+  .laser-circle {
+    width: 150px;
+    height: 150px;
+    font-size: 15px;   
+  }
+
+  .laser-circle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px; 
+    margin-bottom: -40px; 
+    z-index: 1;  
+    position: relative;
+  }
+
+  .laser-location-title h2 { 
+    margin-top: 50px;
+    margin-bottom: 0; 
+  }
+
+  .laser-circle.active {
+    transform: scale(1.1);
+}
+}
+/*LASER PAGE SPECIALIST NAME*/
+
+.prtf-title {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #b9d4ac;
+  font-weight: 200;
+  letter-spacing: 8px;
+  margin: 0;
+  text-align: center; 
+}
+
+.laser-specialist {
+  font-family: "Nunito Sans", sans-serif; ;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  margin-top: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.laser-specialist-image {
+  max-width: 30%;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 70px;
+  flex: 0 0 30%; 
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.laser-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  filter: saturate(20%); 
+}
+
+.laser-name-box {
+  max-width: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 90%;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  height: 90%;
+  width: 70%;
+  gap: 30px;
+  padding: 40px 20px;
+  z-index: 2; 
+}
+
+.laser-name-Shevchenko {
+  font-family: "Nunito Sans", sans-serif; 
+  text-align: center;
+  font-weight: 200; 
+  color: #0a8a44;
+  margin-bottom: -40px; 
+}
+
+.laser-name-box p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem; 
+  font-weight: 100;
+}
+
+.laser-name-box h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin: 0; 
+}
+
+.laser-name-box h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 100; 
+  letter-spacing: 3px;
+  margin-bottom: 5px;   
+}
+
+.laser-specialist-info {
+  font-family: "Nunito Sans", sans-serif;
+  max-width: 800px;
+  text-align: left;
+  font-size: 1rem;
+  color: black;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 30px; 
+}
+
+.laser-column-left,
+.laser-column-right {
+  flex: 1;
+  padding: 10px 20px;
+  padding-top: 10px; 
+}
+
+.laser-social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.laser-social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.laser-social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.phone-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.message-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  margin-left: -5px;
+}
+
+.phone-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/*LASER PAGE SPECIALIST NAME MOBILE*/
+
+@media (max-width: 768px) {
+  .laser-specialist {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .laser-specialist-image {
+    width: 60%;
+    max-width: 70%;
+    top: -30px;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    padding-left: 0;
+  }
+
+  .laser-specialist-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 80px;
+  }
+
+  .laser-name-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 20px 50px;
+    box-sizing: border-box;
+    margin-top: 280px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1; 
+  }
+
+  .laser-specialist-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .column {
+    text-align: center;
+    flex: 1 1 100%;
+    padding: 0 10px;  
+  }
+
+ .laser-column-right, 
+ .laser-column-left {
+  text-align: center;
+  flex: 1 1 100%;
+  padding: 0 10px;
+}
+}
+
+/*LASER SPECIALIST NAME REVERSE REVERSE REVERSE*/
+
+.laser-specialist.reverse-design {
+  align-items: center;
+  height: 400px; 
+  margin-top: 10px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;  
+}
+
+.laser-specialist.reverse-design .laser-name-box {
+  height: 90%;
+  width: 70%;
+  right: auto;
+  left: 0;
+  bottom: 20px;
+  max-width: 80%;
+  gap: 30px;
+  padding: 40px 20px;
+  flex: 0 0 90%;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  z-index: 2;
+  position: absolute;
+}
+
+.laser-specialist.reverse-design .laser-specialist-image {
+  height: 100%;
+  max-width: 30%;
+  padding-right: 70px; 
+  padding-left: 0;
+  flex: 0 0 30%;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+
+.laser-specialist.reverse-design .laser-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*LASER PAGE SPECIALIST NAME REVERSE DESIGN MOBILE VERSION*/
+
+@media (max-width: 768px) {
+  .laser-specialist.reverse-design .laser-name-box {
+    width: 100%;
+    max-width: 100%;
+    margin-top: -180px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.laser-specialist.reverse-design .laser-specialist-image {
+  height: auto;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-right: 0;
+  position: relative;
+  top: -30px;
+  z-index: 2;
+}
+
+ .laser-specialist.reverse-design .laser-specialist-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 80px;
+}
+  
+.laser-specialist.reverse-design {
+  height: auto;
+  align-items: center;
+  flex-direction: column;
+}
+}
+
+/*LASER PAGE SPECIALIST PORTFOLIO SLIDESHOW*/
+
+.specialist-slideshow::-webkit-scrollbar { display: none; }
+.specialist-slideshow {
+  -ms-overflow-style: none;      
+  scrollbar-width: none;         
+}
+
+.specialist-slideshow {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 10px);
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;                     
+  padding: 0;                   
+}
+
+.slide-image {
+  background-image: none;
+  list-style: none;
+  overflow: hidden;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 180px;                 
+  background: #fff;
+  color: rgb(224, 227, 22);
+  border-radius: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-btn.left { left: -20px; }
+.slider-btn.right { right: -20px; }
+
+
+.specialist-portfolio {
+  position: relative;
+  max-width: 950px;
+  margin: 10px auto 40px;
+}
+
+/* mobile: one card per view */
+@media (max-width: 768px) {
+  .specialist-slideshow {
+    grid-auto-columns: 100%;
+  }
+}
+
+
+/*NAILS PAGE*/
+/*NAILS PAGE MAIN SCREEN*/
+
+.nails-main-mobile {
+   display: none;
+}
+
+.nails-main {
+  width: 100%;     
+}
+
+.nails-main-image h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2.0rem;
+  color: black;
+  background-color: white;
+  font-weight: 200;
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  bottom: 290px;
+  padding: 10px 20px;
+  transform: translateX(-50%);
+}
+
+.nails-main-image {
+  max-width: 1400px;
+  text-align: center;
+  position: relative;
+}
+ 
+.nails-main-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.nails-text-on {
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  animation: slideInCenter 1.5s ease-out forwards;
+  animation-delay: 500ms;
+}
+
+/*NAILS PAGE MAIN SCREEN MOBILE*/
+
+@media (max-width: 768px) {
+  .nails-main-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.nails-text-on-mob {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: black;
+  position: absolute;
+  width: 70%;
+  position: absolute;
+  padding: 10px 20px;  
+  left: 35%;
+  bottom: 90px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  transform: translateX(-50%);        
+}
+
+.nails-main {
+  display: none;
+}
+
+.nails-main-image-mobile {
+  text-align: center;
+  position: relative;  
+}
+
+.nails-main-image-mobile-img {
+  width: 100%;
+  height: 350px;
+  display: block;
+  object-fit: cover;  
+}
+
+.nails-main-mobile img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+}
+
+/*NAILS TEXT WHY US*/
+
+.nails-whyus-section {
+  font-family: "Nunito Sans", sans-serif;
+  color: #151a17;
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 50px;
+  padding-top: 0;
+  background-image: url('../images/BackgroundHome.png'); 
+}
+
+.nails-text h2 {
+  font-size: 1.7rem;
+  color: #0a8a44;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.nails-text { 
+  background-color: #ffffff;                                 
+  margin: 40px auto;
+  width: 85%;  
+  padding: 30px 20px;            
+}
+
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.pseparator {
+  display: block;
+  height: auto;
+  width: 100px;
+  margin: 20px auto;
+}
+
+/*NAILS WHYUS MOBILE VERSION*/
+
+@media (max-width: 768px) {
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.nails-whyus-section {
+  z-index: 2;
+  position: relative;
+}
+
+.nails-text p {
+  line-height: 1.5; 
+  text-align: justify;   
+}
+
+.nails-text {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+}
+
+/*NAILS PAGE CIRCLES SECTION*/
+
+/*NAILS PAGE CIRCLES TITLE*/
+
+.nails-circle-row {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 20px; 
+  margin-bottom: 40px; 
+}
+
+.nails-location h2 {
+  font-family: "Nunito Sans", sans-serif;
+  color: #0a8a44;
+  font-size: 1.7rem;
+  font-weight: 200;
+  margin-bottom: 40px;
+  margin-top: 40px; 
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+.nails-circle {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  width: 170px;
+  height: 170px;
+  max-width: 160px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 1 1 150px;
+  background-image: url('../images/BackgroundHomeText.png');
+}
+
+.nails-location-title h2 { 
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #0a8a44; 
+  letter-spacing: 8px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 0; 
+  font-weight: 400;
+  margin-bottom: 30px;
+  }
+
+.nails-circle:hover {
+  transform: scale(1.1);
+}
+
+.nails-circle {
+  transition: transform 0.3s ease-in-out;
+}
+ 
+.nails-circle span  { 
+  transform: none;
+  transition: transform 0.3s ease; 
+  z-index: 1;
+}
+
+/*CIRCLES ROW MOBILE VERSION*/
+
+@media (max-width: 768px) {
+  .nails-circle {
+    width: 150px;
+    height: 150px;
+    font-size: 15px;   
+  }
+
+  .nails-circle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px; 
+    margin-bottom: -40px; 
+    z-index: 1;  
+    position: relative;
+  }
+
+  .nails-location-title h2 { 
+    margin-top: 50px;
+    margin-bottom: 0; 
+  }
+
+  .nails-circle.active {
+    transform: scale(1.1);
+}
+}
+
+/*NAILS PAGE SPECIALIST NAME*/
+
+.nails-specialist {
+  font-family: "Nunito Sans", sans-serif; 
+  display: flex;
+  align-items: center;
+  height: 400px;
+  margin-top: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.nails-specialist-image {
+  max-width: 30%;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 70px;
+  flex: 0 0 30%; 
+  box-sizing: border-box;
+}
+
+.nails-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  filter: saturate(20%);
+}
+
+.nails-name-box {
+  max-width: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 90%;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  height: 90%;
+  width: 70%;
+  gap: 30px;
+  padding: 40px 20px;
+  z-index: 2; 
+}
+
+.nails-name-Shevchenko {
+  font-family: "Nunito Sans", sans-serif; 
+  text-align: center;
+  font-weight: 200; 
+  color: #0a8a44;
+  margin-bottom: -40px; 
+}
+
+.nails-name-box p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem; 
+  font-weight: 100;
+}
+
+.nails-name-box h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin: 0; 
+}
+
+.nails-name-box h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 100; 
+  letter-spacing: 3px;
+  margin-bottom: 5px;   
+}
+
+.nails-specialist-info {
+  font-family: "Nunito Sans", sans-serif;
+  max-width: 800px;
+  text-align: left;
+  font-size: 1rem;
+  color: black;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 30px; 
+}
+
+.nails-column-left,
+.nails-column-right {
+  flex: 1;
+  padding: 10px 20px;
+  padding-top: 10px; 
+}
+
+.nails-social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.nails-social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.nails-social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.phone-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.message-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  margin-left: -5px;
+}
+
+.phone-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/*NAILS PAGE SPECIALIST NAME MOBILE*/
+
+@media (max-width: 768px) {
+  .nails-specialist {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .nails-specialist-image {
+    width: 60%;
+    max-width: 70%;
+    top: -30px;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    padding-left: 0;
+  }
+
+  .nails-specialist-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 80px;
+  }
+
+  .nails-name-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 20px 50px;
+    box-sizing: border-box;
+    margin-top: 280px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1; 
+  }
+
+  .nails-specialist-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .column {
+    text-align: center;
+    flex: 1 1 100%;
+    padding: 0 10px;  
+  }
+
+ .nails-column-right, 
+ .nails-column-left {
+  text-align: center;
+  flex: 1 1 100%;
+  padding: 0 10px;
+}
+}
+
+/*NAILS SPECIALIST NAME REVERSE REVERSE REVERSE*/
+
+.nails-specialist.reverse-design {
+  align-items: center;
+  height: 400px; 
+  margin-top: 10px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;  
+}
+
+.nails-specialist.reverse-design .nails-name-box {
+  height: 90%;
+  width: 70%;
+  right: auto;
+  left: 0;
+  bottom: 20px;
+  max-width: 80%;
+  gap: 30px;
+  padding: 40px 20px;
+  flex: 0 0 90%;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  z-index: 2;
+  position: absolute;
+}
+
+.nails-specialist.reverse-design .nails-specialist-image {
+  height: 100%;
+  max-width: 30%;
+  padding-right: 70px; 
+  padding-left: 0;
+  flex: 0 0 30%;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+
+.nails-specialist.reverse-design .nails-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*NAILS PAGE SPECIALIST NAME REVERSE DESIGN MOBILE VERSION*/
+
+@media (max-width: 768px) {
+  .nails-specialist.reverse-design .nails-name-box {
+    width: 100%;
+    max-width: 100%;
+    margin-top: -180px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.nails-specialist.reverse-design .nails-specialist-image {
+  height: auto;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-right: 0;
+  position: relative;
+  top: -30px;
+  z-index: 2;
+}
+
+ .nails-specialist.reverse-design .nails-specialist-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 80px;
+}
+  
+.nails-specialist.reverse-design {
+  height: auto;
+  align-items: center;
+  flex-direction: column;
+}
+}
+
+/*INJECTIONS PAGE*/
+/*INJECTIONS PAGE MAIN SCREEN*/
+
+.injections-main-mobile {
+   display: none;
+}
+
+.injections-main {
+  width: 100%;     
+}
+
+.injections-main-image h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2.0rem;
+  color: black;
+  background-color: white;
+  font-weight: 200;
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  bottom: 290px;
+  padding: 10px 20px;
+  transform: translateX(-50%);
+}
+
+.injections-main-image {
+  max-width: 1400px;
+  text-align: center;
+  position: relative;
+}
+ 
+.injections-main-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.injections-text-on {
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  animation: slideInCenter 1.5s ease-out forwards;
+  animation-delay: 500ms;
+}
+
+/*INJECTION PAGE MAIN SCREEN MOBILE*/
+
+@media (max-width: 768px) {
+.injections-main {
+   display: none;
+}
+
+.injections-main-mobile {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;    
+}
+
+.injections-main-mobile img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.injections-main-image-mobile h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 200;
+  color: black;
+  font-size: 1.5rem;
+  left: 35%;
+  bottom: 300px;
+  padding: 10px 20px;
+  width: 70%;  
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.7);     
+}
+}
+
+/*INJECTION PAGE WHY US SECTION*/
+
+.injections-whyus-section {
+  font-family: "Nunito Sans", sans-serif;
+  color: #151a17;
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 50px;
+  padding-top: 0;
+  background-image: url('../images/BackgroundHome.png'); 
+}
+
+.injections-text h2 {
+  font-size: 1.7rem;
+  color: #0a8a44;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.injections-text { 
+  background-color: #ffffff;                                 
+  margin: 40px auto;
+  width: 85%;  
+  padding: 30px 20px;            
+}
+
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.pseparator {
+  display: block;
+  height: auto;
+  width: 100px;
+  margin: 20px auto;
+}
+
+/*INJECTIINS WHYUS MOBILE VERSION*/
+
+@media (max-width: 768px) {
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.injections-whyus-section {
+  z-index: 2;
+  position: relative;
+}
+
+.injections-text p {
+  line-height: 1.5; 
+  text-align: justify;   
+}
+
+.injections-text {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+}
+
+/*INJECTION PAGE CIRCLES SECTION*/
+
+.injections-circle-row {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 20px; 
+  margin-bottom: 40px; 
+}
+
+.injections-circle {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  width: 170px;
+  height: 170px;
+  max-width: 160px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 1 1 150px;
+  background-image: url('../images/BackgroundHomeText.png');
+}
+
+.injections-location-title h2 { 
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #0a8a44; 
+  letter-spacing: 8px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 0; 
+  font-weight: 400;
+  margin-bottom: 30px;
+  }
+
+.injections-circle:hover {
+  transform: scale(1.1);
+}
+
+.injections-circle {
+  transition: transform 0.3s ease-in-out;
+}
+ 
+.injections-circle span  { 
+  transform: none;
+  transition: transform 0.3s ease; 
+  z-index: 1;
+}
+
+/*INJECTION ROW MOBILE VERSION*/
+
+
+@media (max-width: 768px) {
+
+  .injections-circle {
+    justify-content: center;
+    height: 150px;
+    display: flex;
+    width: 150px;
+    align-items: center;
+    border-radius: 120%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);  
+  }
+
+  .injections-circle-row {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+
+  .injections-circle.active {
+    transform: scale(1.1);
+}
+}
+
+/*INJECTIONS PAGE SPECIALIST SECTION*/
+
+/*INJECTIONS PAGE SPECIALIST NAME*/
+
+.injections-specialist {
+  font-family: "Nunito Sans", sans-serif; ;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  margin-top: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.injections-specialist-image {
+  max-width: 30%;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 70px;
+  flex: 0 0 30%; 
+  box-sizing: border-box;
+}
+
+.injections-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  filter: saturate(20%);
+}
+
+.injections-name-box {
+  max-width: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 90%;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  height: 90%;
+  width: 70%;
+  gap: 30px;
+  padding: 40px 20px;
+  z-index: 2; 
+}
+
+.injections-name-Shevchenko {
+  font-family: "Nunito Sans", sans-serif; 
+  text-align: center;
+  font-weight: 200; 
+  color: #0a8a44;
+  margin-bottom: -40px; 
+}
+
+.injections-name-box p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem; 
+  font-weight: 100;
+}
+
+.injections-name-box h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin: 0; 
+}
+
+.injections-name-box h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 100; 
+  letter-spacing: 3px;
+  margin-bottom: 5px;   
+}
+
+.injections-specialist-info {
+  font-family: "Nunito Sans", sans-serif;
+  max-width: 800px;
+  text-align: left;
+  font-size: 1rem;
+  color: black;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 30px; 
+}
+
+.injections-column-left,
+.injections-column-right {
+  flex: 1;
+  padding: 10px 20px;
+  padding-top: 10px; 
+}
+
+.injections-social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.injections-social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.injections-social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.phone-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.message-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  margin-left: -5px;
+}
+
+.phone-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/*INJECTIONS PAGE SPECIALIST NAME MOBILE*/
+
+@media (max-width: 768px) {
+  .injections-specialist {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .injections-specialist-image {
+    width: 60%;
+    max-width: 70%;
+    top: -30px;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    padding-left: 0;
+  }
+
+  .injections-specialist-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 80px;
+  }
+
+  .injections-name-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 20px 50px;
+    box-sizing: border-box;
+    margin-top: 280px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1; 
+  }
+
+  .injections-specialist-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .column {
+    text-align: center;
+    flex: 1 1 100%;
+    padding: 0 10px;  
+  }
+
+ .injections-column-right, 
+ .injections-column-left {
+  text-align: center;
+  flex: 1 1 100%;
+  padding: 0 10px;
+}
+}
+
+/*INJECTIONS SPECIALIST NAME REVERSE REVERSE REVERSE*/
+
+.injections-specialist.reverse-design {
+  align-items: center;
+  height: 400px; 
+  margin-top: 10px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;  
+}
+
+.injections-specialist.reverse-design .injections-name-box {
+  height: 90%;
+  width: 70%;
+  right: auto;
+  left: 0;
+  bottom: 20px;
+  max-width: 80%;
+  gap: 30px;
+  padding: 40px 20px;
+  flex: 0 0 90%;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  z-index: 2;
+  position: absolute;
+}
+
+.injections-specialist.reverse-design .injections-specialist-image {
+  height: 100%;
+  max-width: 30%;
+  padding-right: 70px; 
+  padding-left: 0;
+  flex: 0 0 30%;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+
+.injections-specialist.reverse-design .injections-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*INJECTIONS PAGE SPECIALIST NAME REVERSE DESIGN MOBILE VERSION*/
+
+@media (max-width: 768px) {
+  .injections-specialist.reverse-design .injections-name-box {
+    width: 100%;
+    max-width: 100%;
+    margin-top: -180px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.injections-specialist.reverse-design .injections-specialist-image {
+  height: auto;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-right: 0;
+  position: relative;
+  top: -30px;
+  z-index: 2;
+}
+
+ .injections-specialist.reverse-design .injections-specialist-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 80px;
+}
+  
+.injections-specialist.reverse-design {
+  height: auto;
+  align-items: center;
+  flex-direction: column;
+}
+}
+
+/*EYELASHES PAGE*/
+/*EYELASHES PAGE MAIN SCREEN*/
+
+.eyelashes-main-mobile {
+   display: none;
+}
+
+.eyelashes-main {
+  width: 100%;     
+}
+
+.eyelashes-main-image h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2.0rem;
+  color: black;
+  background-color: white;
+  font-weight: 200;
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  bottom: 290px;
+  padding: 10px 20px;
+  transform: translateX(-50%);
+}
+
+.eyelashes-main-image {
+  max-width: 1400px;
+  text-align: center;
+  position: relative;
+}
+ 
+.eyelashes-main-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.eyelashes-text-on {
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  animation: slideInCenter 1.5s ease-out forwards;
+  animation-delay: 500ms;
+}
+
+/*EYELASHES PAGE MAIN SCREEN MOBILE*/
+
+@media (max-width: 768px) {
+  .eyelashes-main {
+    display: none;
+}
+
+.eyelashes-main-mobile {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  height: auto;    
+}
+
+.eyelashes-main-image-mobile h2 {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: rgba(255, 255, 255, 0.7); 
+  font-weight: 200;
+  color: black;
+  font-size: 1.5rem;
+  width: 70%; 
+  bottom: 300px;
+  left: 35%;
+  position: absolute;
+  transform: translateX(-50%);
+  padding: 10px 20px;        
+}
+
+.eyelashes-main-mobile img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+}
+
+/*EYELASHES PAGE WHY US SECTION*/
+
+.eyelashes-whyus-section {
+  font-family: "Nunito Sans", sans-serif;
+  color: #151a17;
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 50px;
+  padding-top: 0;
+  background-image: url('../images/BackgroundHome.png'); 
+}
+
+.eyelashes-text h2 {
+  font-size: 1.7rem;
+  color: #0a8a44;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.eyelashes-text { 
+  background-color: #ffffff;                                 
+  margin: 40px auto;
+  width: 85%;  
+  padding: 30px 20px;            
+}
+
+.eyelashes-paragraph {
+  margin: 25px;
+}
+
+.pseparator {
+  display: block;
+  height: auto;
+  width: 100px;
+  margin: 20px auto;
+}
+
+/*EYELASHES WHYUS MOBILE VERSION*/
+
+@media (max-width: 768px) {
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.eyelashes-whyus-section {
+  z-index: 2;
+  position: relative;
+}
+
+.eyelashes-text p {
+  line-height: 1.5; 
+  text-align: justify;   
+}
+
+.eyelashes-text {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+}
+
+/*EYELASHES PAGE CIRCLES SECTION*/
+
+.eyelashes-circle-row {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 20px; 
+  margin-bottom: 40px; 
+}
+
+.eyelashes-location h2 {
+  font-family: "Nunito Sans", sans-serif;
+  color: #0a8a44;
+  font-size: 1.7rem;
+  font-weight: 200;
+  margin-bottom: 40px;
+  margin-top: 40px; 
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+.eyelashes-circle {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  width: 170px;
+  height: 170px;
+  max-width: 160px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 1 1 150px;
+  background-image: url('../images/BackgroundHomeText.png');
+}
+
+.eyelashes-location-title h2 { 
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #0a8a44; 
+  letter-spacing: 8px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 0; 
+  font-weight: 400;
+  margin-bottom: 30px;
+  }
+
+.eyelashes-circle:hover {
+  transform: scale(1.1);
+}
+
+.eyelashes-circle {
+  transition: transform 0.3s ease-in-out;
+}
+ 
+.eyelashes-circle span  { 
+  transform: none;
+  transition: transform 0.3s ease; 
+  z-index: 1;
+}
+
+/*EYELASHES PAGE CIRCLE ROW MOBILE VERSION*/
+
+@media (max-width: 768px) {
+  .eyelashes-circle {
+    width: 150px;
+    height: 150px;
+    font-size: 15px;   
+  }
+
+  .eyelashes-circle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px; 
+    margin-bottom: -40px; 
+    z-index: 1;  
+    position: relative;
+  }
+
+  .eyelashes-location-title h2 { 
+    margin-top: 50px;
+    margin-bottom: 0; 
+  }
+
+  .eyelashes-circle.active {
+    transform: scale(1.1);
+  }
+  }
+ 
+/*EYELASHES PAGE SPECIALIST NAME*/
+
+.eyelashes-specialist {
+  font-family: "Nunito Sans", sans-serif; ;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  margin-top: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.eyelashes-specialist-image {
+  max-width: 30%;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 70px;
+  flex: 0 0 30%; 
+  box-sizing: border-box;
+}
+
+.eyelashes-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  filter: saturate(20%);
+}
+
+.eyelashes-name-box {
+  max-width: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 90%;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  height: 90%;
+  width: 70%;
+  gap: 30px;
+  padding: 40px 20px;
+  z-index: 2; 
+}
+
+.eyelashes-name-Shevchenko {
+  font-family: "Nunito Sans", sans-serif; 
+  text-align: center;
+  font-weight: 200; 
+  color: #0a8a44;
+  margin-bottom: -40px; 
+}
+
+.eyelashes-name-box p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem; 
+  font-weight: 100;
+}
+
+.eyelashes-name-box h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin: 0; 
+}
+
+.eyelashes-name-box h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 100; 
+  letter-spacing: 3px;
+  margin-bottom: 5px;   
+}
+
+.eyelashes-specialist-info {
+  font-family: "Nunito Sans", sans-serif;
+  max-width: 800px;
+  text-align: left;
+  font-size: 1rem;
+  color: black;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 30px; 
+}
+
+.eyelashes-column-left,
+.eyelashes-column-right {
+  flex: 1;
+  padding: 10px 20px;
+  padding-top: 10px; 
+}
+
+.eyelashes-social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.eyelashes-social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.eyelashes-social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.phone-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.message-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  margin-left: -5px;
+}
+
+.phone-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/*EYELASHES PAGE SPECIALIST NAME MOBILE*/
+
+@media (max-width: 768px) {
+  .eyelashes-specialist {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .eyelashes-specialist-image {
+    width: 60%;
+    max-width: 70%;
+    top: -30px;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    padding-left: 0;
+  }
+
+  .eyelashes-specialist-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 80px;
+  }
+
+  .eyelashes-name-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 20px 50px;
+    box-sizing: border-box;
+    margin-top: 280px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1; 
+  }
+
+  .eyelashes-specialist-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .column {
+    text-align: center;
+    flex: 1 1 100%;
+    padding: 0 10px;  
+  }
+
+ .eyelashes-column-right, 
+ .eyelashes-column-left {
+  text-align: center;
+  flex: 1 1 100%;
+  padding: 0 10px;
+}
+}
+
+/*EYELASHES SPECIALIST NAME REVERSE*/
+
+.eyelashes-specialist.reverse-design {
+  align-items: center;
+  height: 400px; 
+  margin-top: 10px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;  
+}
+
+.eyelashes-specialist.reverse-design .eyelashes-name-box {
+  height: 90%;
+  width: 70%;
+  right: auto;
+  left: 0;
+  bottom: 20px;
+  max-width: 80%;
+  gap: 30px;
+  padding: 40px 20px;
+  flex: 0 0 90%;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  z-index: 2;
+  position: absolute;
+}
+
+.eyelashes-specialist.reverse-design .eyelashes-specialist-image {
+  height: 100%;
+  max-width: 30%;
+  padding-right: 70px; 
+  padding-left: 0;
+  flex: 0 0 30%;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+
+.eyelashes-specialist.reverse-design .eyelashes-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*EYELASHES PAGE SPECIALIST NAME REVERSE DESIGN MOBILE VERSION*/
+
+@media (max-width: 768px) {
+  .eyelashes-specialist.reverse-design .eyelashes-name-box {
+    width: 100%;
+    max-width: 100%;
+    margin-top: -180px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyelashes-specialist.reverse-design .eyelashes-specialist-image {
+  height: auto;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-right: 0;
+  position: relative;
+  top: -30px;
+  z-index: 2;
+}
+
+ .eyelashes-specialist.reverse-design .eyelashes-specialist-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 80px;
+}
+  
+.eyelashes-specialist.reverse-design {
+  height: auto;
+  align-items: center;
+  flex-direction: column;
+}
+}
+
+  
+/*FACE HAIR PAGE*/
+/*FACE HAIR PAGE MAIN SCREEN*/
+
+.facehair-main-mobile {
+   display: none;
+}
+
+.facehair-main {
+  width: 100%;     
+}
+
+.facehair-main-image h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2.0rem;
+  color: black;
+  background-color: white;
+  font-weight: 200;
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  bottom: 290px;
+  padding: 10px 20px;
+  transform: translateX(-50%);
+}
+
+.facehair-main-image {
+  max-width: 1400px;
+  text-align: center;
+  position: relative;
+}
+ 
+.facehair-main-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.facehair-text-on {
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  animation: slideInCenter 1.5s ease-out forwards;
+  animation-delay: 500ms;
+}
+
+/*FACE HAIR PAGE MAIN SCREEN MOBILE*/
+
+@media (max-width: 768px) {
+  .facehair-main-mobile {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;        
+}
+
+.facehair-main-image-mobile h2 {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 200;
+  width: 70%; 
+  left: 35%;
+  bottom: 300px;
+  transform: translateX(-50%);
+  position: absolute;
+  padding: 10px 20px;
+}
+
+.facehair-main {
+  display: none;
+}
+
+.facehair-main-mobile img {
+  height: auto;
+  max-width: 100%;  
+  display: block;
+  object-fit: cover;
+}
+}
+
+/*FACE HAIR PAGE WHY US SECTION*/
+
+.facehair-whyus-section {
+  font-family: "Nunito Sans", sans-serif;
+  color: #151a17;
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 50px;
+  padding-top: 0;
+  background-image: url('../images/BackgroundHome.png'); 
+}
+
+.facehair-text h2 {
+  font-size: 1.7rem;
+  color: #0a8a44;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.facehair-text { 
+  background-color: #ffffff;                                 
+  margin: 40px auto;
+  width: 85%;  
+  padding: 30px 20px;            
+}
+
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.pseparator {
+  display: block;
+  height: auto;
+  width: 100px;
+  margin: 20px auto;
+}
+
+/*FACE HAIR PAGE WHY US MOBILE VERSION*/
+
+@media (max-width: 768px) {
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.facehair-whyus-section {
+  z-index: 2;
+  position: relative;
+}
+
+.facehair-text p {
+  line-height: 1.5; 
+  text-align: justify;   
+}
+
+.facehair-text {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+}
+
+/*FACE HAIR PAGE CIRCLES SECTION*/
+
+.facehair-circle-row {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 20px; 
+  margin-bottom: 40px; 
+}
+
+.facehair-location h2 {
+  font-family: "Nunito Sans", sans-serif;
+  color: #0a8a44;
+  font-size: 1.7rem;
+  font-weight: 200;
+  margin-bottom: 40px;
+  margin-top: 40px; 
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+.facehair-circle {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  width: 170px;
+  height: 170px;
+  max-width: 160px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 1 1 150px;
+  background-image: url('../images/BackgroundHomeText.png');
+}
+
+.facehair-location-title h2 { 
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #0a8a44; 
+  letter-spacing: 8px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 0; 
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+  
+.facehair-circle:hover {
+  transform: scale(1.1);
+}
+
+.facehair-circle {
+  transition: transform 0.3s ease-in-out;
+}
+ 
+.facehair-circle span  { 
+  transform: none;
+  transition: transform 0.3s ease; 
+  z-index: 1;
+}
+
+/*FACE HAIR PAGE CIRCLES ROW MOBILE VERSION*/
+
+@media (max-width: 768px) {
+  .facehair-circle {
+    width: 150px;
+    height: 150px;
+    font-size: 15px;   
+  }
+
+  .facehair-circle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px; 
+    margin-bottom: -40px; 
+    z-index: 1;  
+    position: relative;
+  }
+
+  .facehair-location-title h2 { 
+    margin-top: 50px;
+    margin-bottom: 0; 
+  }
+
+ .facehair-circle.active {
+    transform: scale(1.1);
+  }
+  }
+
+/*FACE HAIR PAGE SPECIALIST NAME*/
+
+.facehair-specialist {
+  font-family: "Nunito Sans", sans-serif; ;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  margin-top: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.facehair-specialist-image {
+  max-width: 30%;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 70px;
+  flex: 0 0 30%; 
+  box-sizing: border-box;
+}
+
+.facehair-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  filter: saturate(20%);
+}
+
+.facehair-name-box {
+  max-width: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 90%;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  height: 90%;
+  width: 70%;
+  gap: 30px;
+  padding: 40px 20px;
+  z-index: 2; 
+}
+
+.facehair-name-Shevchenko {
+  font-family: "Nunito Sans", sans-serif; 
+  text-align: center;
+  font-weight: 200; 
+  color: #0a8a44;
+  margin-bottom: -40px; 
+}
+
+.facehair-name-box p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem; 
+  font-weight: 100;
+}
+
+.facehair-name-box h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin: 0; 
+}
+
+.facehair-name-box h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 100; 
+  letter-spacing: 3px;
+  margin-bottom: 5px;   
+}
+
+.facehair-specialist-info {
+  font-family: "Nunito Sans", sans-serif;
+  max-width: 800px;
+  text-align: left;
+  font-size: 1rem;
+  color: black;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 30px; 
+}
+
+.facehair-column-left,
+.facehair-column-right {
+  flex: 1;
+  padding: 10px 20px;
+  padding-top: 10px; 
+}
+
+.facehair-social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.facehair-social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.facehair-social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.phone-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.message-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  margin-left: -5px;
+}
+
+.phone-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/*FACE HAIR PAGE SPECIALIST NAME MOBILE */
+
+@media (max-width: 768px) {
+  .facehair-specialist {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .facehair-specialist-image {
+    width: 60%;
+    max-width: 70%;
+    top: -30px;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    padding-left: 0;
+  }
+
+  .facehair-specialist-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 80px;
+  }
+
+  .facehair-name-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 20px 50px;
+    box-sizing: border-box;
+    margin-top: 280px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1; 
+  }
+
+  .facehair-specialist-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .column {
+    text-align: center;
+    flex: 1 1 100%;
+    padding: 0 10px;  
+  }
+
+ .facehair-column-right, 
+ .facehair-column-left {
+  text-align: center;
+  flex: 1 1 100%;
+  padding: 0 10px;
+}
+}
+
+/*FACE HAIR SPECIALIST NAME REVERSE REVERSE REVERSE*/
+
+.facehair-specialist.reverse-design {
+  align-items: center;
+  height: 400px; 
+  margin-top: 10px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;  
+}
+
+.facehair-specialist.reverse-design .facehair-name-box {
+  height: 90%;
+  width: 70%;
+  right: auto;
+  left: 0;
+  bottom: 20px;
+  max-width: 80%;
+  gap: 30px;
+  padding: 40px 20px;
+  flex: 0 0 90%;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  z-index: 2;
+  position: absolute;
+}
+
+.facehair-specialist.reverse-design .facehair-specialist-image {
+  height: 100%;
+  max-width: 30%;
+  padding-right: 70px; 
+  padding-left: 0;
+  flex: 0 0 30%;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+
+.facehair-specialist.reverse-design .facehair-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*FACE HAIR PAGE SPECIALIST NAME REVERSE DESIGN MOBILE VERSION*/
+
+@media (max-width: 768px) {
+  .facehair-specialist.reverse-design .facehair-name-box {
+    width: 100%;
+    max-width: 100%;
+    margin-top: -180px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.facehair-specialist.reverse-design .facehair-specialist-image {
+  height: auto;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-right: 0;
+  position: relative;
+  top: -30px;
+  z-index: 2;
+}
+
+ .facehair-specialist.reverse-design .facehair-specialist-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 80px;
+}
+  
+.facehair-specialist.reverse-design {
+  height: auto;
+  align-items: center;
+  flex-direction: column;
+}
+}
+
+
+/*CLEANING PAGE*/
+/*CLEANING PAGE MAIN SCREEN*/
+
+.cleaning-main-mobile {
+   display: none;
+}
+
+.cleaning-main {
+  width: 100%;     
+}
+
+.cleaning-main-image h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2.0rem;
+  color: black;
+  background-color: white;
+  font-weight: 200;
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  bottom: 290px;
+  padding: 10px 20px;
+  transform: translateX(-50%);
+}
+
+.cleaning-main-image {
+  max-width: 1400px;
+  text-align: center;
+  position: relative;
+}
+ 
+.cleaning-main-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.cleaning-text-on {
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  animation: slideInCenter 1.5s ease-out forwards;
+  animation-delay: 500ms;
+}
+
+/*CLEANING PAGE MAIN SCREEN MOBILE*/
+
+@media (max-width: 768px) {
+  .cleaning-main-mobile {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;        
+}
+
+.cleaning-main-image-mobile h2 {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 200;
+  width: 70%; 
+  left: 35%;
+  bottom: 300px;
+  transform: translateX(-50%);
+  position: absolute;
+  padding: 10px 20px;
+}
+
+.cleaning-main {
+  display: none;
+}
+
+.cleaning-main-mobile img {
+  height: auto;
+  max-width: 100%;  
+  display: block;
+  object-fit: cover;
+}
+}
+
+/*CLEANING PAGE WHY US SECTION*/
+
+.cleaning-whyus-section {
+  font-family: "Nunito Sans", sans-serif;
+  color: #151a17;
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 50px;
+  padding-top: 0;
+  background-image: url('../images/BackgroundHome.png'); 
+}
+
+.cleaning-text h2 {
+  font-size: 1.7rem;
+  color: #0a8a44;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.cleaning-text { 
+  background-color: #ffffff;                                 
+  margin: 40px auto;
+  width: 85%;  
+  padding: 30px 20px;            
+}
+
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.pseparator {
+  display: block;
+  height: auto;
+  width: 100px;
+  margin: 20px auto;
+}
+
+/*CLEANING PAGE WHY US MOBILE VERSION*/
+
+@media (max-width: 768px) {
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.cleaning-whyus-section {
+  z-index: 2;
+  position: relative;
+}
+
+.cleaning-text p {
+  line-height: 1.5; 
+  text-align: justify;   
+}
+
+.cleaning-text {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+}
+
+/*CLEANING PAGE CIRCLES SECTION*/
+
+.cleaning-circle-row {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 20px; 
+  margin-bottom: 40px; 
+}
+
+.cleaning-location h2 {
+  font-family: "Nunito Sans", sans-serif;
+  color: #0a8a44;
+  font-size: 1.7rem;
+  font-weight: 200;
+  margin-bottom: 40px;
+  margin-top: 40px; 
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+.cleaning-circle {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  width: 170px;
+  height: 170px;
+  max-width: 160px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 1 1 150px;
+  background-image: url('../images/BackgroundHomeText.png');
+}
+
+.cleaning-location-title h2 { 
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #0a8a44; 
+  letter-spacing: 8px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 0; 
+  font-weight: 400;
+  margin-bottom: 30px;
+  }
+    
+.cleaning-circle:hover {
+  transform: scale(1.1);
+}
+
+.cleaning-circle {
+  transition: transform 0.3s ease-in-out;
+}
+ 
+.cleaning-circle span  { 
+  transform: none;
+  transition: transform 0.3s ease; 
+  z-index: 1;
+}
+
+ .cleaning-circle.active {
+    transform: scale(1.1);
+  }
+
+/*CIRCLES ROW MOBILE VERSION*/
+
+@media (max-width: 768px) {
+  .cleaning-circle {
+    width: 150px;
+    height: 150px;
+    font-size: 15px;   
+  }
+
+  .cleaning-circle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px; 
+    margin-bottom: -40px; 
+    z-index: 1;  
+    position: relative;
+  }
+
+  .cleaning-location-title h2 { 
+    margin-top: 50px;
+    margin-bottom: 0; 
+  }
+  .cleaning-circle.active {
+    transform: scale(1.1);
+  }
+  }
+
+/*CLEANING PAGE SPECIALIST NAME*/
+
+.cleaning-specialist {
+  font-family: "Nunito Sans", sans-serif; ;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  margin-top: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cleaning-specialist-image {
+  max-width: 30%;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 70px;
+  flex: 0 0 30%; 
+  box-sizing: border-box;
+}
+
+.cleaning-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  filter: saturate(20%);
+}
+
+.cleaning-name-box {
+  max-width: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 90%;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  height: 90%;
+  width: 70%;
+  gap: 30px;
+  padding: 40px 20px;
+  z-index: 2; 
+}
+
+.cleaning-name-Shevchenko {
+  font-family: "Nunito Sans", sans-serif; 
+  text-align: center;
+  font-weight: 200; 
+  color: #0a8a44;
+  margin-bottom: -40px; 
+}
+
+.cleaning-name-box p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem; 
+  font-weight: 100;
+}
+
+.cleaning-name-box h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin: 0; 
+}
+
+.cleaning-name-box h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 100; 
+  letter-spacing: 3px;
+  margin-bottom: 5px;   
+}
+
+.cleaning-specialist-info {
+  font-family: "Nunito Sans", sans-serif;
+  max-width: 800px;
+  text-align: left;
+  font-size: 1rem;
+  color: black;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 30px; 
+}
+
+.cleaning-column-left,
+.cleaning-column-right {
+  flex: 1;
+  padding: 10px 20px;
+  padding-top: 10px; 
+}
+
+.cleaning-social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.cleaning-social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.cleaning-social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.phone-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.message-link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: #0a8a44;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  margin-left: -5px;
+}
+
+.phone-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/*CLEANING PAGE SPECIALIST NAME MOBILE*/
+
+@media (max-width: 768px) {
+  .cleaning-specialist {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .cleaning-specialist-image {
+    width: 60%;
+    max-width: 70%;
+    top: -30px;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    padding-left: 0;
+  }
+
+  .cleaning-specialist-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 80px;
+  }
+
+  .cleaning-name-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 20px 50px;
+    box-sizing: border-box;
+    margin-top: 280px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1; 
+  }
+
+  .cleaning-specialist-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .column {
+    text-align: center;
+    flex: 1 1 100%;
+    padding: 0 10px;  
+  }
+
+ .cleaning-column-right, 
+ .cleaning-column-left {
+  text-align: center;
+  flex: 1 1 100%;
+  padding: 0 10px;
+}
+}
+
+
+/*CLEANING SPECIALIST NAME REVERSE REVERSE REVERSE*/
+
+.cleaning-specialist.reverse-design {
+  align-items: center;
+  height: 400px; 
+  margin-top: 10px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;  
+}
+
+.cleaning-specialist.reverse-design .cleaning-name-box {
+  height: 90%;
+  width: 70%;
+  right: auto;
+  left: 0;
+  bottom: 20px;
+  max-width: 80%;
+  gap: 30px;
+  padding: 40px 20px;
+  flex: 0 0 90%;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url('../images/BackgroundHomeText.png');
+  background-size: cover;
+  z-index: 2;
+  position: absolute;
+}
+
+.cleaning-specialist.reverse-design .cleaning-specialist-image {
+  height: 100%;
+  max-width: 30%;
+  padding-right: 70px; 
+  padding-left: 0;
+  flex: 0 0 30%;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+
+.cleaning-specialist.reverse-design .cleaning-specialist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*CLEANING PAGE SPECIALIST NAME REVERSE DESIGN MOBILE VERSION*/
+
+@media (max-width: 768px) {
+  .cleaning-specialist.reverse-design .cleaning-name-box {
+    width: 100%;
+    max-width: 100%;
+    margin-top: -180px;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.cleaning-specialist.reverse-design .cleaning-specialist-image {
+  height: auto;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-right: 0;
+  position: relative;
+  top: -30px;
+  z-index: 2;
+}
+
+ .cleaning-specialist.reverse-design .cleaning-specialist-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 80px;
+}
+  
+.cleaning-specialist.reverse-design {
+  height: auto;
+  align-items: center;
+  flex-direction: column;
+}
+}
+
+  
+/*CONTACT PAGE*/
+/*CONTACT PAGE MAIN SCREEN*/
+
+.contact-main-mobile {
+   display: none;
+}
+
+.contact-main {
+  width: 100%;     
+}
+
+.contact-main-image h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2.0rem;
+  color: black;
+  background-color: white;
+  font-weight: 200;
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  bottom: 250px;
+  padding: 11px 22px;
+  transform: translateX(-50%);
+}
+
+.contact-main-image {
+  max-width: 1400px;
+  text-align: center;
+  position: relative;
+}
+ 
+.contact-main-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/*ACTIVE MAIN TEXT*/
+
+.contact-main h2 {
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  animation: slideInCenter 1.5s ease-out forwards;
+  opacity: 0;   
+  white-space: nowrap; 
+  animation-delay: 0.5s;                      
+}
+
+@keyframes slideInCenter {
+to {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}  
+}
+
+
+/*CONTACT PAGE MAIN SCREEN MOBILE*/
+
+@media (max-width: 768px) {
+  .contact-main-mobile {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;        
+}
+
+.contact-main-image-mobile h2 {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: rgb(248, 245, 245);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 200;
+  width: 70%; 
+  left: 35%;
+  bottom: 300px;
+  transform: translateX(-50%);
+  position: absolute;
+  padding: 10px 20px;
+}
+
+.contact-main {
+  display: none;
+}
+
+.contact-main-mobile img {
+  height: auto;
+  max-width: 100%;  
+  display: block;
+  object-fit: cover;
+}
+}
+
+
+/*CONTACT PAGE WHY US SECTION*/
+
+.contact-whyus-section {
+  font-family: "Nunito Sans", sans-serif;
+  color: #151a17;
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center; 
+  margin: auto;
+  padding: 40px;
+  border-radius: 0;
+  background-image: none;
+}
+
+.contact-text h2 {
+  font-size: 1.7rem;
+  color: #0a8a44;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-text { 
+                               
+  margin: 40px auto;
+  width: 65%;  
+  padding: 30px 20px;   
+  text-align: center;  
+  padding-left: 30px;   
+  padding-right: 30px;   
+}
+
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.pseparator {
+  display: block;
+  height: auto;
+  width: 100px;
+  margin: 20px auto;
+}
+
+/*CONTACT PAGE WHY US MOBILE VERSION*/
+
+@media (max-width: 768px) {
+.spaced-paragraph {
+  margin: 25px;
+}
+
+.contact-whyus-section {
+  z-index: 2;
+  position: relative;
+}
+
+.contact-text p {
+  line-height: 1.5; 
+  text-align: justify;   
+}
+
+.contact-text {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+}
+
+
+/*CONTACT PAGE CONTACT FORM CONTACT FORM*/
+
+.contact {
+  background-color: rgb(248, 245, 245);
+  object-fit: cover;
+  padding: 20px;
+}
+
+.checkbox-grid {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  display: grid; 
+  gap: 10px;
+}
+
+.form-group p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 200;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #8a8d8b;
+}
+
+.checkbox-grid label {
+  font-family: "Nunito Sans", sans-serif;
+  gap: 7px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;    
+}
+
+.checkbox-grid input[type="checkbox"] {
+  transform: scale(1.1);
+}
+
+
+.file-upload-item label {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 200;
+  display: block;
+  margin-bottom: 5px;  
+}
+
+.file-upload-item input[type="file"] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.file-upload-item {
+  min-width: 280px;
+  flex: 1 1 calc(50% - 20px);   
+}
+
+.file-upload-row {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 20px;  
+}
+
+.form-group {
+  margin-bottom: 20px;  
+}
+
+.contact-section {
+  max-width: 900px;
+  background: rgb(248, 245, 245);
+  margin: auto;
+  padding: 70px;  
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.contact-form label {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;  
+}
+
+.contact-form {
+  flex-direction: column;
+  display: flex;
+  gap: 15px;
+}
+
+.contact-form select,.contact-form input,.contact-form textarea {
+  font-family: "Nunito Sans", sans-serif;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-section h2 {
+  font-family: "Dancing Script", cursive; 
+  color: #2e5a41;
+  font-size: 1.6em;
+  font-weight: 200;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-top: 0;  
+}
+
+.contact-section p {
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form button {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+  color: white;
+  background-color: #e5dc36; 
+  transition: background 0.3s ease;
+  border: none;
+  padding: 14px;
+  cursor: pointer;
+  border-radius: 6px;   
+  width: 200px;
+  text-align: center;
+}
+
+.contact-form button:hover {
+  background-color: #6cb8ef;
+}
+
+.short-questions {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.1rem;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;  
+}
+
+.question-item label {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 200;
+  display: block;
+  margin-bottom: 5px;  
+}
+
+.question-item select {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;  
+}
+
+.question-item {
+  min-width: 280px; 
+  flex: 1 1 calc(50% - 20px);   
+}
+
+
+/*CONTACT PAGE FORM FORM FORM MOBILE VERSION*/
+
+@media (max-width: 600px) {
+
+  .question-item {
+    flex: 1 1 100%;
+  }
+  .file-upload-item {
+    flex: 1 1 100%;
+  }
+  .contact-section {
+    padding: 20px;
+  }
+
+}
+
+
+body.contact-page {
+  background: url("../images/BackgroundHome.png") no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #111;
+}
+
+
+/*INSIDE PAGES LOCATIONS INCSIDE PAGES INSIDE PAGES*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
