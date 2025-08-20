@@ -557,7 +557,7 @@ a:hover {
 }
 
 .transfer-contact {
-  color: #fbed2b; /* U Beauty pink */
+  color: #fbed2b; 
   text-decoration: none;
   border-style: double;
   border-bottom: 2px solid;
@@ -567,7 +567,7 @@ a:hover {
 }
 
 .transfer-contact:hover {
-  color: #88c8ff;; /* slightly darker pink */
+  color: #88c8ff;; 
   border-bottom: 2px solid #fbed2b;
   padding: 5px;  
 }
@@ -1625,6 +1625,7 @@ a:hover {
 /*NAILS WHYUS MOBILE VERSION*/
 
 @media (max-width: 768px) {
+    
 .spaced-paragraph {
   margin: 25px;
 }
