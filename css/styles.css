@@ -933,7 +933,8 @@ a:hover {
   bottom: 50px;
   background-color: rgba(255, 255, 255, 0.7);
   color: black;
-  transform: translateX(-50%);        
+  transform: translateX(-50%);
+  bottom: 120px;
 }
 
 .laser-main {
@@ -1554,10 +1555,11 @@ a:hover {
   position: absolute;
   padding: 10px 20px;  
   left: 35%;
-  bottom: 90px;
+  bottom: 120px;
   background-color: rgba(255, 255, 255, 0.7);
   color: black;
-  transform: translateX(-50%);        
+  transform: translateX(-50%);  
+    
 }
 
 .nails-main {
@@ -2117,6 +2119,9 @@ a:hover {
   transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.7);     
 }
+    ,injections-text-on-mob {
+        bottom: 120px;
+    }
 }
 
 /*INJECTION PAGE WHY US SECTION*/
@@ -2640,6 +2645,10 @@ a:hover {
   display: block;
   object-fit: cover;
 }
+
+    .eyelashes-text-on-mob {
+        bottom: 120px;
+    }
 }
 
 /*EYELASHES PAGE WHY US SECTION*/
@@ -3176,6 +3185,9 @@ a:hover {
   display: block;
   object-fit: cover;
 }
+    .facehair-text-on-mob {
+        bottom: 120px;
+    }
 }
 
 /*FACE HAIR PAGE WHY US SECTION*/
