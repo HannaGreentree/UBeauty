@@ -934,7 +934,7 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.7);
   color: black;
   transform: translateX(-50%);
-  bottom: 120px;
+  
 }
 
 .laser-main {
@@ -1559,7 +1559,7 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.7);
   color: black;
   transform: translateX(-50%);  
-    
+  bottom: 50px;  
 }
 
 .nails-main {
@@ -2120,7 +2120,7 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.7);     
 }
     ,injections-text-on-mob {
-        bottom: 120px;
+        bottom: 50px;
     }
 }
 
@@ -2647,7 +2647,7 @@ a:hover {
 }
 
     .eyelashes-text-on-mob {
-        bottom: 120px;
+        bottom: 50px;
     }
 }
 
@@ -3186,7 +3186,7 @@ a:hover {
   object-fit: cover;
 }
     .facehair-text-on-mob {
-        bottom: 120px;
+        bottom: 50px;
     }
 }
 
@@ -3724,6 +3724,9 @@ a:hover {
   display: block;
   object-fit: cover;
 }
+    .cleaning-text-on-mob {
+        bottom: 50px;
+    }
 }
 
 /*CLEANING PAGE WHY US SECTION*/
@@ -4275,6 +4278,10 @@ to {
   display: block;
   object-fit: cover;
 }
+
+    .contact-tex-on-mob {
+        bottom: 50px;
+    }
 }
 
 
