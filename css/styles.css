@@ -308,9 +308,9 @@ html, body {
 
 @media (max-width: 768px) {
  .circle {
-    width: 165px;
-    height: 165px;
-    font-size: 19px; 
+    width: 155px;
+    height: 155px;
+    font-size: 18px; 
     color: #096532;   
   }
 
