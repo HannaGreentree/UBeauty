@@ -749,8 +749,9 @@ a:hover {
 /*WHY US MOBILE VERSION*/
 
 @media (max-width: 768px) {
- .spaced-paragraph {
-   margin: 25px;
+.pseparator {
+  margin: 0px;
+  padding: 0px;  
 }
 
 .why-section p {
