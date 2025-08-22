@@ -1559,7 +1559,7 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.7);
   color: black;
   transform: translateX(-50%);  
-  bottom: 50px;  
+  bottom: 30px;  
 }
 
 .nails-main {
@@ -1584,7 +1584,7 @@ a:hover {
     display: block;
 }
     .nails-main-mobile 
-   bottom: 50px;
+   bottom: 30px;
 }
 
 /*NAILS TEXT WHY US*/
@@ -2122,7 +2122,7 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.7);     
 }
     ,injections-text-on-mob {
-        bottom: 70px;
+        bottom: 30px;
     }
 }
 
@@ -2649,7 +2649,7 @@ a:hover {
 }
 
     .eyelashes-text-on-mob {
-        bottom: 70px;
+        bottom: 30px;
     }
 }
 
