@@ -570,10 +570,6 @@ a:hover {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);   
 }
 
-.spaced-paragraph {
-  margin: 25px;
-}
-
 .transfer-contact {
   color: #fbed2b; /* U Beauty pink */
   text-decoration: none;
@@ -848,7 +844,7 @@ a:hover {
 
 .footer-bottom {
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Nunito Sans", sans-serif;
   color: #2c1e1e;
   margin-top: 30px;
@@ -862,6 +858,9 @@ a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-size: 15px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #2c1e1e;
   }
 
   .footer-logo {
@@ -1528,7 +1527,7 @@ a:hover {
   margin: 10px auto 40px;
 }
 
-/* mobile: one card per view */
+
 @media (max-width: 768px) {
   .specialist-slideshow {
     grid-auto-columns: 100%;
@@ -1659,10 +1658,6 @@ a:hover {
   margin: 40px auto;
   width: 85%;  
   padding: 30px 20px;            
-}
-
-.spaced-paragraph {
-  margin: 25px;
 }
 
 .pseparator {
@@ -2198,15 +2193,11 @@ a:hover {
   padding: 30px 20px;            
 }
 
-.spaced-paragraph {
-  margin: 25px;
-}
-
 .pseparator {
   display: block;
   height: auto;
   width: 100px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 /*INJECTIINS WHYUS MOBILE VERSION*/
@@ -2721,15 +2712,11 @@ a:hover {
   padding: 30px 20px;            
 }
 
-.eyelashes-paragraph {
-  margin: 25px;
-}
-
 .pseparator {
   display: block;
   height: auto;
   width: 100px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 /*EYELASHES WHYUS MOBILE VERSION*/
@@ -3260,15 +3247,11 @@ a:hover {
   padding: 30px 20px;            
 }
 
-.spaced-paragraph {
-  margin: 25px;
-}
-
 .pseparator {
   display: block;
   height: auto;
   width: 100px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 /*FACE HAIR PAGE WHY US MOBILE VERSION*/
@@ -3797,10 +3780,6 @@ a:hover {
   margin: 40px auto;
   width: 85%;  
   padding: 30px 20px;            
-}
-
-.spaced-paragraph {
-  margin: 25px;
 }
 
 .pseparator {
@@ -4360,23 +4339,16 @@ to {
   padding-right: 30px;   
 }
 
-.spaced-paragraph {
-  margin: 25px;
-}
-
 .pseparator {
   display: block;
   height: auto;
   width: 100px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 /*CONTACT PAGE WHY US MOBILE VERSION*/
 
 @media (max-width: 768px) {
-.spaced-paragraph {
-  margin: 25px;
-}
 
 .contact-whyus-section {
   z-index: 2;
