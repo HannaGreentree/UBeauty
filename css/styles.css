@@ -366,7 +366,7 @@ html, body {
 /*SERVICE LIST MOBILE VERSION*/
 
 @media (max-width: 600px) {
-.service list {
+.services-list {
    display: grid;
     grid-template-columns: 1fr;
     text-align: left;
@@ -827,7 +827,7 @@ a:hover {
 
   .footer-logo {
     margin: 0 auto;
-    margin-left: 55px;
+    margin-left: 45px;
   }
 
   .footer-nav {
