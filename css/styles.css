@@ -370,8 +370,9 @@ html, body {
    display: grid;
     grid-template-columns: 1fr;
     text-align: left;
-    padding-left: 80px;
+    padding-left: 60px;
     letter-spacing: 5px;  
+    font-weight: bold;
 }
     
     
@@ -387,7 +388,7 @@ html, body {
 
   .services-list li {
     margin-bottom: 5px; 
-    font-size: 13px;
+    font-size: 14px;
     list-style-position: inside;
     font-family: "Nunito Sans", sans-serif;
     font-weight: 500;
@@ -827,7 +828,7 @@ a:hover {
 
   .footer-logo {
     margin: 0 auto;
-    margin-left: 45px;
+    margin-left: 39px;
   }
 
   .footer-nav {
