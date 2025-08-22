@@ -519,7 +519,7 @@ a:hover {
 
 .location-list li {
    
-   font-size: 1.3rem;
+   font-size: 1.2rem;
    margin-right: 10px;
    font-weight: 400; 
    padding-left: -10px;
@@ -697,14 +697,14 @@ a:hover {
     height: auto;
   }
     .member-name p:nth-of-type(2) {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #1a1517;
   font-weight: 300;
 }
 .member-name p {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .member-name h3 {
   font-family: "Dancing Script"; 
