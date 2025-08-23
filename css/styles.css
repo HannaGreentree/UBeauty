@@ -553,7 +553,7 @@ a:hover {
 
 .location-box h2 {
     font-weight: 400;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     line-height: 1;
     margin-bottom: 30px;
 }
@@ -605,7 +605,7 @@ a:hover {
 }
 
 .transfer-contact {
-  color: #fbed2b; /* U Beauty pink */
+  color: #fbed2b; 
   text-decoration: none;
   border-style: double;
   border-bottom: 2px solid;
@@ -615,7 +615,7 @@ a:hover {
 }
 
 .transfer-contact:hover {
-  color: #88c8ff;; /* slightly darker pink */
+  color: #88c8ff;; 
   border-bottom: 2px solid #fbed2b;
   padding: 5px;  
 }
@@ -650,7 +650,9 @@ a:hover {
   font-size: 1.5rem;
   padding: 3px; 
 }
-    
+.about-section h2 {
+  font-size: 1.8rem;
+}
 }
 
 /*TEAM CONTAINER*/
@@ -744,6 +746,9 @@ a:hover {
   color: #1a1517;
   font-weight: 300;
 }
+ .our-team h2 {
+   font-size: 1.8rem;
+}
 }
 
 /*WHY US SECTION*/
@@ -805,7 +810,9 @@ a:hover {
   font-size: 1.5rem;
   padding: 3px; 
 }
-    
+.why-section h2 {
+  font-size: 1.8rem;
+}    
 }
 
 /*FOOTER*/
