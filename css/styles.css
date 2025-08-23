@@ -965,6 +965,11 @@ a:hover {
   .footer-search {
     flex-direction: column;
   } 
+  .footer-search button {
+    flex-direction: column;
+    height: 50px;
+    width: 100px;
+  } 
 }
 
 /*LASER PAGE*/
