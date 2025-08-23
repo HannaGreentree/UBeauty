@@ -311,8 +311,9 @@ html, body {
  .circle {
     width: 160px;
     height: 160px;
-    font-size: 19px; 
-    color: #096532;   
+    font-size: 22px; 
+    color: #096532;
+    padding: 10px;
   }
 
 .circle-row {
@@ -329,6 +330,19 @@ html, body {
 
 .circle.active {
   transform: scale(1.1);
+}
+    .circle:hover {
+  transform: scale(1.1);
+}
+
+.circle {
+  transition: transform 0.3s ease-in-out;
+}
+ 
+.circle span  { 
+  transform: none;
+  transition: transform 0.3s ease; 
+  z-index: 1;  
 }
 }
 
@@ -372,7 +386,7 @@ html, body {
     display: grid;
     grid-template-columns: 1fr;
     text-align: left;
-    padding-left: 40px;
+    padding-left: 20px;
     letter-spacing: 4px;  
     font-weight: 300;
 }
@@ -833,8 +847,8 @@ a:hover {
 }
 
 .social-icons img {
-  width: 40px;
-  height: 40px;  
+  width: 45px;
+  height: 45px;  
 }
 
 .footer-links {
@@ -901,6 +915,10 @@ a:hover {
     font-family: "Nunito Sans", sans-serif;
     font-size: 1.1rem;
     text-align: left;
+  }
+   .social-icons img {
+    height: 45px;
+    width: 45px;
   }
 }
 
