@@ -75,7 +75,7 @@ html, body {
      display: block;
      font-family: "Nunito Sans", sans-serif;
      position: absolute;
-     font-size: 55px;
+     font-size: 50px;
      font-weight: 200; 
      left: 20px;
      top: 20px;
@@ -84,7 +84,7 @@ html, body {
      background: rgb(255, 255, 255);
      box-shadow: none;
      margin: -10px;
-     color: #949698;
+     color: #abadaf;
       z-index: 5;
 }
 
@@ -831,6 +831,8 @@ a:hover {
   font-family: 'Nunito Sans', sans-serif;
   background-color: #ffffff;
   padding: 40px 20px;
+  font-weight: 300;
+  font-size: 1rem;  
 }
 
 .footer-container {
@@ -846,7 +848,7 @@ a:hover {
 
 .footer-logo img {
   width: 220px;
-  margin-left: 50px;
+  margin-left: 50;
   margin-top: 50px;
 }
 
@@ -864,8 +866,8 @@ a:hover {
 }
 
 .social-icons img {
-  width: 45px;
-  height: 45px;  
+  width: 35px;
+  height: 35px;  
 }
 
 .footer-links {
@@ -916,7 +918,7 @@ a:hover {
 
   .footer-logo {
     margin: 0 auto;
-    margin-left: 38px;
+    margin-left: 38px;    
   }
 
   .footer-nav {
