@@ -1136,6 +1136,13 @@ a:hover {
   margin: 0;
   margin-top: 30px;
 }
+.laser-text h2 {
+  font-size: 1.8rem;
+  color: #0a8a44;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
 }
 
 /*LASER PAGE CIRCLES SECTION*/
@@ -1237,6 +1244,13 @@ a:hover {
     margin-bottom: 0; 
   }
 
+   .laser-location h2 {
+    font-family: "Nunito Sans", sans-serif;
+    color: #0a8a44;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+    
   .laser-circle.active {
     transform: scale(1.1);
 }
@@ -1456,6 +1470,28 @@ a:hover {
   text-align: center;
   flex: 1 1 100%;
   padding: 0 10px;
+}
+ .laser-name-box p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.2rem; 
+  font-weight: 100;
+}
+
+.laser-name-box h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #0a8a44;
+  margin: 0; 
+}
+
+.laser-name-box h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 100; 
+  letter-spacing: 3px;
+  margin-bottom: 5px;   
 }
 }
 
